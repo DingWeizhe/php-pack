@@ -1,7 +1,7 @@
 {
   "name": "php-pack",
   "description": "HiSpeed Pack/Unpack of bytes formats, just like PHP and PERL,rauls's version can not be used,so i fix it.",
-  "version": "1.0.2",
+  "version": "1.0.0-beta",
   "repository": {
     "type": "git",
     "url": "git://github.com/acgpiano/php-pack.git"
@@ -17,6 +17,7 @@
     "preinstall": "node-gyp rebuild",
     "test": "node test/test.js"
   },
+  "readme": "README.md",
   "engines": {
     "node": ">=4.0.0"
   }

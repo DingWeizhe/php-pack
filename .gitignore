@@ -1,2 +1,7 @@
 **/build
 **/nbproject
+.git
+.gitignore
+.DS_Store
+npm-debug.log
+bulid
