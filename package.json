@@ -1,7 +1,7 @@
 {
     "name": "php-pack",
     "description": "HiSpeed Pack/Unpack of bytes formats, just like PHP and PERL,rauls's version can not be used,so i fix it.",
-    "version": "1.0.0-beta",
+    "version": "1.0.0-release",
     "repository": {
         "type": "git",
         "url": "git://github.com/acgpiano/php-pack.git"
