@@ -1,7 +1,3 @@
-#include <node/node.h>
-#include <node/node_object_wrap.h>
-#include <node/node_buffer.h>
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>

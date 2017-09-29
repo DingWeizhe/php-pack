@@ -7,6 +7,7 @@ HiPack (C) Raul Sobon
 #define PACK_H
 
 #include <node.h>
+#include <node/node_object_wrap.h>
 #include <node_version.h>
 #include <node_buffer.h>
 
