@@ -678,20 +678,20 @@ public:
 			int arg = 1, argb;
 			int namelen = 0;
 			int size=0;
-			Local<String>	name;
-
+      Local<String>	name;
+      
 			/* Handle format arguments if any */
 			if (formatlen > 0) {
 				c = format[formatidx];
 
 				if (c >= '0' && c <= '9') {
-					arg = c - '0';
+          arg = 0;
 
 					while (formatlen > 0 && format[formatidx] >= '0' && format[formatidx] <= '9') {
 						arg = (arg*10) + (format[formatidx] - '0');
 						formatidx++;
 						formatlen--;
-					}
+          }
 				} else if (c == '*') {
 					arg = -1;
 					formatidx++;
@@ -712,7 +712,7 @@ public:
 					namelen = 200;
 				name = v8::String::NewFromUtf8(isolate, format+formatidx-namelen,v8::NewStringType::kNormal, namelen ).ToLocalChecked();
 			} else {
-				char temp[8]; sprintf( temp, "%d", arg );
+        char temp[8]; sprintf( temp, "%d", arg );
 				namelen = strlen(temp);
 				name = v8::String::NewFromUtf8(isolate, temp,v8::NewStringType::kNormal, namelen ).ToLocalChecked();
 			}
@@ -801,7 +801,7 @@ public:
 				if (size != 0 && size != -1 && INT_MAX - size + 1 < inputpos) {
 					NODEJS_ERROR( "Type %c: integer overflow", type,isolate);
 					inputpos = 0;
-				}
+        }
 
 				if ((inputpos + size) <= inputlen && input != NULL) {
 					switch ((int) type) {
